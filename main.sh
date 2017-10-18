@@ -2,10 +2,39 @@
 
 #backup storage
 
-##cek_folder ()
-#{
-  #commands
-#}
+cek_folder ()
+{
+  #Backuping the files
+for FILE in $LS
+
+do
+
+	if [ -f $FILE ] #Jika $FILE merupakan FILE dan bukan folder
+
+	then
+
+		if [ -f $HOME/$DEST/Backup\-$FILE ] #Jika file sudah ada di bakcup folder, hapus dulu
+
+		then
+
+			rm $HOME/$DEST/Backup\-$FILE
+
+		fi
+
+		touch $HOME/$DEST/Backup\-$FILE
+
+		echo "#FILE BACKUP TANGGAL $DATE#" >> $HOME/$DEST/Backup\-$FILE
+
+		cat $HOME/$DIR/$FILE >> $HOME/$DEST/Backup\-$FILE
+
+		echo "$DATE  $USER telah mem-backup file $HOME/$DIR/$FILE" >> $HOME/$DEST/log-backup\-$DEST
+
+		echo -e "Backuping $HOME/$DIR/$FILE" 
+
+	fi
+
+done
+}
 
 ##################################################
 #Reading source directory and dest directory
@@ -47,40 +76,5 @@ fi
 
 
 #kalau kosong gimana? kalau folder berisi gimana?
-
-
-
-#Backuping the files
-for FILE in $LS
-
-do
-
-	if [ -f $FILE ] #Jika $FILE merupakan FILE dan bukan folder
-
-	then
-
-		if [ -f $HOME/$DEST/Backup\-$FILE ] #Jika file sudah ada di bakcup folder, hapus dulu
-
-		then
-
-			rm $HOME/$DEST/Backup\-$FILE
-
-		fi
-
-		touch $HOME/$DEST/Backup\-$FILE
-
-		echo "#FILE BACKUP TANGGAL $DATE#" >> $HOME/$DEST/Backup\-$FILE
-
-		cat $HOME/$DIR/$FILE >> $HOME/$DEST/Backup\-$FILE
-
-		echo "$DATE  $USER telah mem-backup file $HOME/$DIR/$FILE" >> $HOME/$DEST/log-backup\-$DEST
-
-		echo -e "Backuping $HOME/$DIR/$FILE" 
-
-	fi
-
-done
-
-
 
 echo -e "====================================" >> $HOME/$DEST/log-backup\-$DEST
