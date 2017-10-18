@@ -10,6 +10,6 @@ Untuk mengerjakan tugas Administrasi Sistem Gasal 2017/2018
 # - Valdi Haris Adi N (71140004)                              #
 #                                                             #
 
-This backup scripts only backuping the current directory where this scripts is executed
+This backup scripts backuping the selected folder into the $PWD directory
 
-Make sure that there is no space for the name of the directory
+Make sure that there is no space for the name of the directory,or it will ERROR
