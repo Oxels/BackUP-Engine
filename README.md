@@ -6,7 +6,7 @@ Untuk mengerjakan tugas Administrasi Sistem Gasal 2017/2018
 # Created by:                                                 #
 # - Ponang Jagad Pramuditya (71160005)                        #
 # - Setiawan (71160077)                                       #
-# - Emanuel Norman P W (711500116)                            #
+# - Emanuel Norman P W (71150116)                            #
 # - Valdi Haris Adi N (71140004)                              #
 #                                                             #
 
