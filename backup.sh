@@ -20,7 +20,7 @@ do
   elif [ -f $1/$FILE ]
   then
   
-    touch $2/Backup/-$FILE
+    touch $2/Backup\-$FILE
     echo "#FILE BACKUP TANGGAL $DATE#" >> $2/Backup\-$FILE
     cat $1/$FILE >> $2/Backup\-$FILE
     echo "$DATE $USER telah mem-backup file $1/$FILE." >> $PWD/log-backup
