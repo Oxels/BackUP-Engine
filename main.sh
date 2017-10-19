@@ -43,8 +43,12 @@ $HOME/./backup.sh $FOLDER $DEST
 
 echo  "=================================== END OF BACKUP ====================================" >> $PWD/log-backup
 
+if [ -e backup-$FOLDER-$DATE.tar.gz ]
+then
+	rm backup-$FOLDER-$DATE.tar.gz
+fi
 
-tar -czf backup-$DATE.tar.gz $HOME/Backup
+tar -czf backup-$FOLDER-$DATE.tar.gz $HOME/Backup
 
 rm -R $HOME/Backup
 
