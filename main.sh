@@ -78,3 +78,8 @@ fi
 #kalau kosong gimana? kalau folder berisi gimana?
 
 echo -e "====================================" >> $HOME/$DEST/log-backup\-$DEST
+
+#Archiving files into .tar.gz file
+tar -czf backup-$DATE.tar.gz Backup_temp
+mv ./backup-$DATE.tar.gz $HOME/Backups/backup-$DATE.tar.gz
+rm $PWD/Backup_temp
