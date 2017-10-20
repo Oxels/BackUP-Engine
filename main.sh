@@ -26,7 +26,7 @@ DEST="$HOME/Backup"
 echo  "" >> $PWD/log-backup
 echo  "===================== Backup $NOW Started ======================" >> $PWD/log-backup
 
-$HOME/./backup.sh $FOLDER $DEST
+$PWD/backup.sh $FOLDER $DEST
 
 echo  "=================================== END OF BACKUP ====================================" >> $PWD/log-backup
 
