@@ -12,14 +12,14 @@ do
   #If $FILE is a directory
   if [ -d $1/$FILE ]
   then
-  
+    #Calling the backup.sh for backuping the files inside the Source_Directory/Directory
     mkdir $2/Backup-$FILE
     $HOME/./backup.sh $1/$FILE $2/Backup-$FILE
   
   #If $FILE is a file
   elif [ -f $1/$FILE ]
   then
-  
+    #Backuping the files
     touch $2/Backup\-$FILE
     echo "#FILE BACKUP TANGGAL $DATE#" >> $2/Backup\-$FILE
     cat $1/$FILE >> $2/Backup\-$FILE
