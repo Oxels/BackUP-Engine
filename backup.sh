@@ -14,7 +14,7 @@ do
   then
     #Calling the backup.sh for backuping the files inside the Source_Directory/Directory
     mkdir $2/Backup-$FILE
-    $HOME/./backup.sh $1/$FILE $2/Backup-$FILE
+    $PWD/backup.sh $1/$FILE $2/Backup-$FILE
   
   #If $FILE is a file
   elif [ -f $1/$FILE ]
