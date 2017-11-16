@@ -72,6 +72,18 @@ tar -czf backup-$FOLDER-$DATE.tar.gz $HOME/Backup
 rm -R $HOME/Backup
 #----------------------------------------------------
 
+if [ -e "backup-$FOLDER-$DATE.tar.gz" ]; then
+    rm backup-$FOLDER-$DATE.tar.gz
+fi
+#----------------------------------------------------
+
+
+
+#Archiving the backup_directory and delete the backup_directory
+tar -czf backup-$FOLDER-$DATE.tar.gz $HOME/Backup 2>/dev/null
+rm -R $HOME/Backup
+#----------------------------------------------------
+
 
 #Backup Finished
 echo
