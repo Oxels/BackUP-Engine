@@ -1,5 +1,12 @@
 #!/bin/sh
-#This main.sh will call backup.sh as function
+#This script will backup your targeted directory which only making one .tar.gz file in a day.
+#If the backup script are used more than 1 time in a day, the older .tar.gz backup file will
+#be replaced by the newer one. 
+#
+#The name of the backup files are:
+#                      backup-[Name of the targeted directory]-[date of backup].tar.gz
+#
+#The backup logs file are saved in the same directory as the script are placed.
 
 function backup (){
 #$1=Source directory
@@ -56,7 +63,7 @@ DEST="$HOME/Backup"
 echo  "" >> $PWD/log-backup
 echo  "===================== Backup $NOW Started ======================" >> $PWD/log-backup
 
-$PWD/backup.sh $FOLDER $DEST
+backup $FOLDER $DEST
 
 echo  "=================================== END OF BACKUP ====================================" >> $PWD/log-backup
 
