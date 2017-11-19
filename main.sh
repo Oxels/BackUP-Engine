@@ -77,7 +77,7 @@ fi
 
 
 #Archiving the backup_directory and delete the backup_directory
-tar -czf backup-$FOLDER-$DATE.tar.gz $HOME/Backup
+tar -czf backup-$FOLDER-$DATE.tar.gz $HOME/Backup 2>/dev/null
 rm -R $HOME/Backup
 #----------------------------------------------------
 
