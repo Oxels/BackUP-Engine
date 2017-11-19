@@ -4,7 +4,7 @@ Untuk mengerjakan tugas Administrasi Sistem Gasal 2017/2018
 # ----------------- Backup Storage Scripts ------------------ #
 
 # Created by:                                                 #
-# - Ponang "pjpramuditya" Jagad Pramuditya (71160005)         #
+# - Ponang "pjpramudhitya" Jagad Pramudhitya (71160005)       #
 # - Setiawan "oxels" (71160077)                               #
 # - Emanuel "emanuelnpw" Norman P W (71150116)                #
 # - Valdi "valdz13" Haris Adi N (71140004)                    #
