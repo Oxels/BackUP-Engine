@@ -70,8 +70,7 @@ backup $FOLDER $DEST
 echo  "=================================== END OF BACKUP ====================================" >> $PWD/log-backup
 
 #Check if there is an old version of the same file backup (same name file)
-if [ -e backup-$FOLDER-$DATE.tar.gz ]
-then
+if [ -e "backup-$FOLDER-$DATE.tar.gz" ]; then
 	rm backup-$FOLDER-$DATE.tar.gz
 fi
 #----------------------------------------------------
